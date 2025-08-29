@@ -1,4 +1,5 @@
 import HeroSection from "@/components/blocks/modern-hero";
+import SponsorsSection from "@/components/blocks/sponsors-section";
 
 const data = {
   heading: "Tu puerta de entrada a Web3",
@@ -11,5 +12,10 @@ const data = {
 };
 
 export default function HomePage() {
-  return <HeroSection {...data} />;
+  return (
+    <>
+      <HeroSection {...data} />
+      <SponsorsSection />
+    </>
+  );
 }

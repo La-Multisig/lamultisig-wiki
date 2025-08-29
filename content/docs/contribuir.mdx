@@ -1,0 +1,196 @@
+---
+title: Guía de Contribución
+description: Aprende cómo contribuir a La Multisig Wiki
+icon: GitPullRequest
+---
+
+# 🛠️ Guía de Contribución
+
+¡Gracias por tu interés en contribuir a La Multisig Wiki! Esta guía paso a paso te ayudará a entender cómo puedes participar en el proyecto.
+
+## 📝 Resumen del Proceso
+
+1. 🍴 Fork del repositorio (solo la primera vez)
+2. 💻 Abrir VS Code Web (desde el fork)
+3. ✍️ Crear o modificar contenido
+4. 🌿 Crear rama en Git
+5. 📦 Stage de cambios
+6. ⬆️ Push de cambios
+7. 🔄 Crear Pull Request
+8. 👀 Revisión
+9. ✅ Aprobación
+
+## 📚 Guía Detallada
+
+### 1. 🍴 Crear Fork del Repositorio
+
+Para comenzar, necesitas crear un fork del repositorio en GitHub:
+
+![Crear Fork](/content/contribution/01_fork.png)
+
+### 2. 💻 Abrir VS Code Web
+
+1. Presiona la tecla `.` (punto) en tu fork para abrir Visual Studio Code Web
+2. La pantalla navegará automáticamente al editor de código
+
+![Abrir VS Code Web](/content/contribution/02_vscode.png)
+
+### 3. ✍️ Crear o Modificar Contenido
+
+Puedes crear un nuevo archivo o modificar uno existente desde la barra lateral:
+
+![Editar Contenido](/content/contribution/03_content.png)
+
+#### 📄 Ejemplo: Crear Nuevo Documento
+
+Al crear un nuevo documento MDX, recuerda:
+- Incluir un título en la sección superior
+- Seguir el formato Markdown
+- Basarte en documentos existentes como referencia
+
+![Nuevo Documento](/content/contribution/04_markdown.png)
+
+### 4. 🌿 Gestión de Git
+
+#### 🌳 Crear Rama
+1. Abre "Control de código fuente" en la barra lateral
+2. Haz clic en los 3 puntos → Rama → Crear rama
+3. Asigna un nombre descriptivo siguiendo el [estándar de nombres de rama](#nombres-de-rama-)
+4. Haz clic en "Cambiar a la rama"
+
+![Menú de creación de rama](/content/contribution/05_branch.png)
+![Formulario de nombre de rama](/content/contribution/06_branch_name.png)
+![Confirmación de cambio de rama](/content/contribution/07_switch_branch.png)
+
+#### 📦 Stage de Cambios
+1. Haz clic en los 3 puntos → Cambios → Almacenar provisionalmente todos los cambios
+2. Escribe un mensaje de commit siguiendo el [estándar de mensajes de commit](#mensajes-de-commit-)
+
+![Stage de cambios](/content/contribution/08_stage_changes.png)
+![Mensaje de commit](/content/contribution/09_commit_message.png)
+
+### 5. ⬆️ Push de Cambios
+
+Revisa tus cambios y haz clic en "Confirmar y enviar cambios":
+
+![Crear Pull Request](/content/contribution/10_create_pr.png)
+
+### 6. 🔄 Crear Pull Request
+
+1. Regresa a GitHub (cambia `.dev` por `.com` en la URL)
+2. Haz clic en "Compare & pull request"
+
+![Configurar Pull Request](/content/contribution/11_edit_pr.png)
+
+#### ⚙️ Configurar Pull Request
+- Verifica que la rama apunte a `main` del repositorio original
+- Añade un título descriptivo siguiendo el [estándar de títulos de PR](#títulos-de-pull-request-)
+- Completa la descripción y la lista de verificación
+- Menciona issues relacionados si los hay
+- Asigna a "lamultisig" como revisor
+- Marca "Allow edits by maintainers"
+- Haz clic en "Create pull request"
+
+### 7. 👀 Revisión y Aprobación
+
+1. Los administradores revisarán tu PR
+2. Netlify generará una URL de "Deploy Preview"
+3. Revisa los cambios en la URL de preview
+4. Responde a cualquier comentario o sugerencia
+
+![Revisión Netlify](/content/contribution/12_netlify_preview.png)
+
+### 8. ✅ Finalización
+
+Una vez aprobado, los administradores harán merge del PR y los cambios se reflejarán en el sitio oficial.
+
+## 🔍 Opcional: Revisar cambios antes de Pull Request
+
+Para asegurarte de que tus cambios se ven correctamente antes de crear el Pull Request, puedes usar GitHub Codespaces:
+
+### 1. Abrir Codespaces
+- Presiona `CTRL + J` para abrir la terminal
+- Selecciona la primera opción de Codespaces
+- Elige cualquier tipo de instancia (todas funcionan igual)
+- Se abrirá una nueva ventana con el ambiente de desarrollo
+
+### 2. Configurar el Entorno
+En la terminal, ejecuta los siguientes comandos:
+```bash
+# Instalar dependencias
+pnpm install
+
+# Iniciar el servidor de desarrollo
+pnpm dev
+```
+
+### 3. Revisar Cambios
+- Haz clic en "Abrir en el navegador" cuando esté listo
+- Se abrirá una nueva pestaña con el sitio
+- Navega hasta la sección que has modificado
+- Verifica que todo se vea correctamente
+
+### 4. Hot Reload
+- A medida que hagas cambios en el código
+- La interfaz se actualizará automáticamente
+- No necesitas recargar la página manualmente
+
+![Selección de Codespaces](/content/contribution/13_codespaces.png)
+![Terminal con comandos](/content/contribution/14_terminal.png)
+![Vista previa del sitio](/content/contribution/15_preview_site.png)
+
+## 📋 Estándares de Contribución
+
+Para mantener la consistencia en el proyecto, seguimos estos estándares:
+
+### 🌿 Nombres de Rama
+
+Formato: `tipo/descripcion-corta`
+
+Tipos:
+- `docs/` - Para cambios en documentación
+- `fix/` - Para correcciones
+- `feat/` - Para nuevas características
+- `update/` - Para actualizaciones de contenido existente
+
+Ejemplos:
+- `docs/agregar-guia-bitcoin`
+- `fix/corregir-enlaces-rotos`
+- `feat/nueva-seccion-defi`
+- `update/actualizar-tokens`
+
+### 💬 Mensajes de Commit
+
+Formato: `tipo: descripción corta`
+
+Tipos:
+- `docs:` - Cambios en documentación
+- `fix:` - Correcciones
+- `feat:` - Nuevas características
+- `update:` - Actualizaciones
+
+Ejemplos:
+- `docs: agregar guía de Bitcoin`
+- `fix: corregir enlaces rotos en sección DeFi`
+- `feat: nueva sección sobre stablecoins`
+- `update: actualizar contratos de tokens`
+
+### 🔄 Títulos de Pull Request
+
+Formato: `[TIPO] Descripción corta`
+
+Tipos:
+- `[DOCS]` - Cambios en documentación
+- `[FIX]` - Correcciones
+- `[FEAT]` - Nuevas características
+- `[UPDATE]` - Actualizaciones
+
+Ejemplos:
+- `[DOCS] Agregar guía de Bitcoin`
+- `[FIX] Corregir enlaces rotos en sección DeFi`
+- `[FEAT] Nueva sección sobre stablecoins`
+- `[UPDATE] Actualizar contratos de tokens`
+
+---
+
+*Tu contribución es valiosa para hacer que el conocimiento sobre Web3 sea más accesible para todos.* 
